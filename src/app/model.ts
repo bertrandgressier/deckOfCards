@@ -10,3 +10,5 @@ export interface Card {
   readonly value: number;
 }
 
+export type Deck = Card[];
+
