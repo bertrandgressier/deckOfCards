@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 
 import {DeckOfCardsService} from './deckofcards.service';
-import {Card, Deck} from './model';
+import {Card, Deck} from '../model';
 
 describe('DeckOfCardsService', () => {
 

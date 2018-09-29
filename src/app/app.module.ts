@@ -7,6 +7,9 @@ import {MatButtonModule, MatCardModule, MatToolbarModule} from '@angular/materia
 import { CardComponent } from './components/card/card.component';
 import { CardTableComponent } from './components/card-table/card-table.component';
 import { CardMenuComponent } from './components/card-menu/card-menu.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './app.reducers';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { CardMenuComponent } from './components/card-menu/card-menu.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
