@@ -1,0 +1,9 @@
+version: '2.3'
+
+services:
+  deckofcards:
+    hostname: localhost
+    container_name: deckOfCards
+    build: .
+    ports:
+      - 80:80
