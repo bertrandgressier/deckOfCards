@@ -1,0 +1,8 @@
+.app-card-table {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  background: forestgreen;
+  padding-top: 10px;
+}
