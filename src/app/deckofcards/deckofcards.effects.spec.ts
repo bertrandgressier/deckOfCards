@@ -3,7 +3,7 @@ import {provideMockActions} from '@ngrx/effects/testing';
 import {Observable} from 'rxjs';
 
 import {DeckOfCardsEffects} from './deckofcards.effects';
-import {AddCardInDeckAction, DealCardAction, DeckIsEmptyAction, ShuffleAction} from './deckofcards.action';
+import {AddCardOnTableAction, DealCardAction, DeckIsEmptyAction, ShuffleAction} from './deckofcards.action';
 import {cold, hot} from 'jasmine-marbles';
 import {DeckOfCardsService} from './deckofcards.service';
 import {Suit} from '../model';
@@ -56,7 +56,7 @@ describe('DeckOfCardsEffects', () => {
     // Given
     const action = new DealCardAction();
     const card = {suit: Suit.HEARTS, value: 5};
-    const expectedAction = new AddCardInDeckAction(card);
+    const expectedAction = new AddCardOnTableAction(card);
     mockService.dealOneCard.and.returnValue(card);
 
     actions$ = hot('--a-', {a: action});

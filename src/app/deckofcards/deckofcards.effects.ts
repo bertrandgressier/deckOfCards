@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable, of} from 'rxjs';
-import {AddCardInDeckAction, DeckIsEmptyAction, DeckofcardsActions, DeckOfCardsType} from './deckofcards.action';
+import {AddCardOnTableAction, DeckIsEmptyAction, DeckofcardsActions, DeckOfCardsType} from './deckofcards.action';
 import {mergeMap, tap} from 'rxjs/operators';
 import {DeckOfCardsService} from './deckofcards.service';
 
@@ -20,7 +20,7 @@ export class DeckOfCardsEffects {
       if (card == null) {
         return of(new DeckIsEmptyAction());
       } else {
-        return of(new AddCardInDeckAction(card));
+        return of(new AddCardOnTableAction(card));
       }
     }));
 

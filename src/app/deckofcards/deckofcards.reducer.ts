@@ -15,7 +15,7 @@ export function deckOfCardsReducer(state: DeckOfCardsState = initialState, actio
       return {
         cards: []
       };
-    case DeckOfCardsType.ADD_CARD_IN_DECK:
+    case DeckOfCardsType.ADD_CARD_ON_TABLE:
       return {
         cards: [...state.cards, action.card]
       };

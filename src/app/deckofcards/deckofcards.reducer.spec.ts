@@ -1,5 +1,5 @@
 import {deckOfCardsReducer} from './deckofcards.reducer';
-import {AddCardInDeckAction, DeckIsEmptyAction, ShuffleAction} from './deckofcards.action';
+import {AddCardOnTableAction, DeckIsEmptyAction, ShuffleAction} from './deckofcards.action';
 import {Card, Suit} from '../model';
 
 describe('DeckOfCards Reducer', () => {
@@ -22,13 +22,13 @@ describe('DeckOfCards Reducer', () => {
     expect(state.cards).toEqual([]);
   });
 
-  it('should change state with AddCardInDeckAction', () => {
+  it('should change state with AddCardOnTableAction', () => {
 
     // Given
     const card1: Card = {suit: Suit.HEARTS, value: 5};
     const card2: Card = {suit: Suit.CLUBS, value: 8};
-    const action1 = new AddCardInDeckAction(card1);
-    const action2 = new AddCardInDeckAction(card2);
+    const action1 = new AddCardOnTableAction(card1);
+    const action2 = new AddCardOnTableAction(card2);
     const initialState = {
       cards: []
     };
