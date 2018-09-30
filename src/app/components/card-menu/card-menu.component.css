@@ -1,3 +1,7 @@
+.app-menu {
+  flex-wrap: wrap;
+  display: flex;
+}
 .app-menu-padding {
   flex: 1 1 auto;
 }

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" >
+<mat-toolbar class="app-menu" color="primary" >
   <span>Deck of Cards</span>
 
   <!-- This fills the remaining space of the current row -->
@@ -6,6 +6,8 @@
 
   <span>
     <button mat-raised-button class="app-menu-action" (click)="shuffle()">Shuffle</button>
+  </span>
+  <span>
     <button mat-raised-button class="app-menu-action" (click)="deal()">Deal</button>
   </span>
 </mat-toolbar>

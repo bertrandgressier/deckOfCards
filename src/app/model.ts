@@ -1,8 +1,8 @@
 export enum Suit {
-  HEART = 'HEART',
-  SPADE = 'SPADE',
-  CLUB = 'CLUB',
-  DIAMOND = 'DIAMOND'
+  HEARTS = 'HEARTS',
+  SPADES = 'SPADES',
+  CLUBS = 'CLUBS',
+  DIAMONDS = 'DIAMONDS'
 }
 
 export interface Card {

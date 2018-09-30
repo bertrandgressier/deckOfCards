@@ -2,7 +2,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   background: forestgreen;
   padding-top: 10px;
+  min-height: 200px;
+  max-height: 100%;
+  padding-left: 10px;
 }

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {select, Store} from '@ngrx/store';
+import {Deck, DeckOfCardsState} from '../../model';
+import {Observable} from 'rxjs';
+import {selectDeckOfCardsCards} from '../../deckofcards/deckofcards.reducer';
 
 @Component({
   selector: 'app-card-table',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardTableComponent implements OnInit {
 
-  constructor() { }
+  cards$: Observable<Deck>;
+
+  constructor(private store: Store<DeckOfCardsState>) {
+    this.cards$ = store.pipe(select(selectDeckOfCardsCards));
+  }
 
   ngOnInit() {
   }
