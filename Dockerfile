@@ -27,7 +27,7 @@ COPY . .
 RUN ng lint
 
 ## Run unit test
-RUN ng test --browsers ChromeHeadlessCI --code-coverage=true --watch=false --progress
+RUN ng test --browsers ChromeHeadlessCI --code-coverage=true --watch=false
 
 ## Build the angular app in production mode and store the artifacts in dist folder
 RUN ng build --prod --build-optimizer
