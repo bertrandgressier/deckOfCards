@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable, of} from 'rxjs';
-import {AddCardInDeckAction, DeckIsEmptyAction, DeckofcardsActions, DeckOfCardsType, ShuffleAction} from './deckofcards.action';
+import {AddCardInDeckAction, DeckIsEmptyAction, DeckofcardsActions, DeckOfCardsType} from './deckofcards.action';
 import {mergeMap, tap} from 'rxjs/operators';
 import {DeckOfCardsService} from './deckofcards.service';
 
@@ -24,9 +24,8 @@ export class DeckOfCardsEffects {
       }
     }));
 
-  @Effect({ dispatch: false } )
+  @Effect({dispatch: false})
   shuffle = this.actions$.pipe(
     ofType(DeckOfCardsType.SHUFFLE),
-    tap(() => this.deckOfCardsService.shuffle())
-    );
+    tap(() => this.deckOfCardsService.shuffle()));
 }
