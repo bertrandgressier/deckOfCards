@@ -15,7 +15,6 @@ This [Dockerfile](./Dockerfile) has 2 steps :
 - If the previous step has not failed, create docker application with just nginx and dist files from angular build. 
 
 ## Dev
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
 ### Development server
 
@@ -33,3 +32,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+### Redux development tool
+
+It's easy to developp on redux with redux devtools extension in your browser. To install this tool, follow instructions here : [http://extension.remotedev.io/](http://extension.remotedev.io/)
