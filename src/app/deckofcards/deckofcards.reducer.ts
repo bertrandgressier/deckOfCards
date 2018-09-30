@@ -7,7 +7,7 @@ const initialState: DeckOfCardsState = {
   cards: []
 };
 
-export const deckOfCardsReducer = (state: DeckOfCardsState = initialState, action: DeckofcardsActions): DeckOfCardsState => {
+export function deckOfCardsReducer(state: DeckOfCardsState = initialState, action: DeckofcardsActions): DeckOfCardsState {
 
   switch (action.type) {
 
@@ -22,9 +22,11 @@ export const deckOfCardsReducer = (state: DeckOfCardsState = initialState, actio
     default:
       return state;
   }
-};
+}
 
-export const selectDeckOfCards = (state: RootState) => state.deckOfCards;
+export function selectDeckOfCards(state: RootState) {
+  return state.deckOfCards;
+}
 
 export const selectDeckOfCardsCards = createSelector(
   selectDeckOfCards,
