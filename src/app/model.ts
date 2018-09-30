@@ -12,3 +12,7 @@ export interface Card {
 
 export type Deck = Card[];
 
+export interface DeckOfCardsState {
+  cards: Deck;
+}
+

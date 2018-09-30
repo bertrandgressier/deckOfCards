@@ -30,4 +30,5 @@ import { EffectsModule } from '@ngrx/effects';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
